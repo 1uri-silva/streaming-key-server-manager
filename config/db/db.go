@@ -20,7 +20,6 @@ func OpenConn() (*sql.DB, error) {
 	port, err := strconv.Atoi(dbEnvPort)
 
 	if err != nil {
-		fmt.Println(err.Error())
 		log.Fatalf("Error convert port string in port number")
 	}
 
