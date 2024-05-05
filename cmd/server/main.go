@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -14,6 +15,7 @@ import (
 func main() {
 	db, err := db.OpenConn()
 	if err != nil {
+		fmt.Println(err.Error())
 		log.Fatalf("Error connect database")
 	}
 
